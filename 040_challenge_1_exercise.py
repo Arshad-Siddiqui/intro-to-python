@@ -30,8 +30,61 @@ print("")
 print("Function: report_long_words")
 
 def report_long_words(words):
+  long_words = filter_short_words(words)
+
   pass
 
+def filter_short_words(words):
+  shortened_words = []
+  for word in words:
+    if len(word) >= 10:
+      shortened_words.append(word)
+  return shortened_words
+
+def transform_longer_words(words):
+  transformed_words = []
+  for word in words:
+    if len(word) > 15:
+      transformed_words.append(word[0:15] + "...")
+    else:
+      transformed_words.append(word)
+  return transformed_words
+
+def filter_hyphens(words):
+  no_hyphens = []
+  for word in words:
+    if '-' not in word:
+      no_hyphens.append(word)
+  return no_hyphens
+
+check_that_these_are_equal(
+  transform_longer_words([
+    'longlongwordword',
+    'megalongwordwordword'
+  ]
+  ), ['longlongwordwor...',
+      'megalongwordwor...']
+)
+
+check_that_these_are_equal(
+  filter_short_words([
+    'banana',
+    'fred',
+    'megalongwordwordword',
+    'key'
+  ]), [
+    'megalongwordwordword',
+  ]
+)
+
+check_that_these_are_equal(
+  filter_hyphens([
+    "fred",
+    "bob",
+    "fr-ed",
+    "b-ob",
+  ]), ["fred", "bob"]
+)
 check_that_these_are_equal(
   report_long_words([
     'hello',
