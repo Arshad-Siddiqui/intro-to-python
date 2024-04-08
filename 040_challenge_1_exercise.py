@@ -30,9 +30,10 @@ print("")
 print("Function: report_long_words")
 
 def report_long_words(words):
-  long_words = filter_short_words(words)
-
-  pass
+  no_hyphens = filter_hyphens(words)
+  no_short_words = filter_short_words(no_hyphens)
+  transformed_longer_words = transform_longer_words(no_short_words)
+  return "These words are quite long: " + ", ".join(transformed_longer_words)
 
 def filter_short_words(words):
   shortened_words = []
