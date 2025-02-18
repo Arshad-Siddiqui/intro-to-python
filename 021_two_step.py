@@ -53,7 +53,7 @@ print("Function: multiply_by_forty_and_add_sixty")
 
 def multiply_by_forty_and_add_sixty(num):
   # Multiply num by forty, and then add sixty
-  pass # <-- This does nothing, replace it with your code
+  return (num * 40) + 60
 
 check_that_these_are_equal(
   multiply_by_forty_and_add_sixty(3423),
