@@ -39,7 +39,7 @@ print("Function: divide_by_two_and_add_one")
 
 def divide_by_two_and_add_one(num):
   # Divide num by two and add one to the result
-  pass # <-- This does nothing, replace it with your code
+  return (num /2) + 1
 
 check_that_these_are_equal(
   divide_by_two_and_add_one(6),
