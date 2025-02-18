@@ -67,7 +67,7 @@ print("Function: add_together_and_double")
 
 def add_together_and_double(num_a, num_b):
   # Add together num_a and num_b, then double the result
-  pass # <-- This does nothing, replace it with your code
+  return (num_a + num_b) * 2
 
 check_that_these_are_equal(
   add_together_and_double(3, 4),
